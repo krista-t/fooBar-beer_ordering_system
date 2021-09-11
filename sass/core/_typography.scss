@@ -1,0 +1,167 @@
+@use "../abstracts/variables" as a;
+
+// typograhpy all around
+* {
+  font-family: a.$primary-font;
+}
+
+button {
+  font-weight: a.$font-weight-bold;
+}
+
+// navigation
+nav li button,
+nav li a,
+.log_in button,
+.log_in li a {
+  font-size: a.$links-nav;
+}
+
+// headings
+h1 {
+  font-weight: a.$font-weight-bolder;
+  font-size: a.$h1;
+  text-transform: uppercase;
+  color: a.$black;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 80px;
+    height: 6px;
+    border-radius: 4px;
+    background-color: a.$green-dark;
+  }
+}
+
+h2 {
+  font-size: a.$h2;
+}
+
+// bartender dashboard
+.servings_orders {
+  font-weight: a.$font-weight-bolder;
+
+  .serving-box,
+  .order-box {
+    p {
+      margin: 0;
+
+      &:first-child {
+        font-size: a.$order-nr;
+      }
+
+      &:last-child {
+        font-size: a.$time;
+        font-weight: a.$font-weight-bold;
+      }
+    }
+  }
+
+  .serving-box p {
+    color: a.$white;
+  }
+
+  .beer_info span:last-child {
+    color: a.$grey-dark;
+  }
+}
+
+.queue-number {
+  font-family: a.$secondary-font;
+
+  span {
+    color: a.$white;
+    background-color: a.$green-dark;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+  }
+
+  p {
+    font-family: a.$secondary-font;
+    color: a.$green-dark;
+  }
+}
+
+.amount {
+  font-size: a.$beer-amount;
+  color: a.$white;
+  font-weight: a.$font-weight-light;
+  text-transform: lowercase;
+}
+
+.time {
+  color: a.$white;
+  font-weight: a.$font-weight-bold;
+}
+
+// products
+.beers, .serving-box, .order-box {
+    h2 {
+      font-weight: a.$font-weight-bolder;
+      font-size: a.$p;
+    }
+
+    h3 {
+      color: a.$grey-dark;
+      font-size: a.$h3;
+    }
+    h2, h3 {
+      margin: 0;
+    }
+
+    .middle_layer p {
+      font-weight: a.$font-weight-bold;
+    }
+}
+
+
+// read-more modals
+.modal_inner_readmore {
+  color: a.$white;
+  font-family: a.$primary-font;
+
+  h2 {
+    font-size: a.$readmore-h2;
+    margin-bottom: 5px;
+  }
+
+  h3 {
+    font-size: a.$readmore-h3;
+    margin: 0;
+  }
+
+  p {
+    font-size: a.$p;
+  }
+}
+
+// checkout modal
+.form {
+  color: a.$black;
+  font-family: a.$primary-font;
+  font-size: a.$p;
+
+  label {
+    font-size: a.$label;
+    font-weight: a.$font-weight-bolder;
+  }
+
+  p {
+    margin: 0;
+    font-size: a.$desc-label;
+  }
+}
+
+// basket
+.basket-container h1 {
+  color: a.$white;
+}

@@ -1,0 +1,95 @@
+@use '../abstracts/variables' as v;
+
+// buttons styling
+button {
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.filters button {
+  text-transform: capitalize;
+  padding: 8px;
+  margin: 0 10px 20px 0;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(196, 196, 196, 1);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(196, 196, 196, 1);
+  box-shadow: 0px 0px 5px 0px rgba(196, 196, 196, 1);
+
+  &:hover {
+    background-color: v.$green-dark;
+    color: v.$white;
+  }
+}
+
+button.active_filter,
+.read_more {
+  background-color: v.$green-dark;
+  color: v.$white;
+}
+
+.read_more {
+  padding: 6px 10px;
+
+  &:hover {
+    background-color: v.$green-mid;
+  }
+}
+
+// order-modal
+.payment_options {
+  margin: 20px 0;
+
+  button {
+    padding: 8px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(196, 196, 196, 1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(196, 196, 196, 1);
+    box-shadow: 0px 0px 5px 0px rgba(196, 196, 196, 1);
+
+    &:hover {
+      background-color: v.$green-dark;
+      color: v.$white;
+    }
+  }
+
+  .credit_card {
+    margin-right: 10px;
+  }
+}
+
+.buttons {
+  margin: 40px 0 0 0;
+  display: flex;
+  justify-content: flex-end;
+
+  button {
+    border: 1px solid v.$green-dark;
+    padding: 14px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: v.$green-dark;
+    text-transform: uppercase;
+  }
+
+  button.return {
+    margin-right: 10px;
+
+    &:hover {
+      background-color: v.$green-mid;
+      border-color: v.$green-mid;
+      color: v.$white;
+    }
+  }
+
+  button.submit {
+    background-color: v.$green-dark;
+    color: v.$white;
+
+    &:hover {
+      background-color: v.$green-mid;
+      border-color: v.$green-mid;
+    }
+  }
+}

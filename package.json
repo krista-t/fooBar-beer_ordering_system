@@ -1,0 +1,17 @@
+{
+  "name": "foobar_exam",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.32.13",
+    "vite": "^2.3.0"
+  },
+  "dependencies": {
+    "chart.js": "^3.2.1",
+    "darkmode-js": "^1.5.7"
+  }
+}

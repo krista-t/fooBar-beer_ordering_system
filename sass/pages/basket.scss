@@ -1,0 +1,149 @@
+@use "../abstracts/variables" as a;
+@use '../abstracts/mixins' as mx;
+
+// basket section
+.modal_container_b {
+  padding: 20px;
+  color: a.$white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+
+  > * {
+    margin: 0 20px;
+  }
+
+  .summary {
+    max-height: 345px;
+    overflow-y: auto;
+  }
+}
+
+aside {
+  max-width: 500px;
+}
+
+.basket-container,
+.reminder {
+  background-color: a.$green-dark;
+  padding: 30px 40px 0 40px;
+  border-radius: 40px;
+  margin: 20px 0 0 0;
+
+  h1 {
+    margin: 0;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    color: a.$white;
+    margin: 0;
+  }
+
+  .cardItem {
+    background-color: a.$green-darker;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: a.$border-radius;
+    -webkit-border-radius: a.$border-radius;
+    -moz-border-radius: a.$border-radius;
+    -ms-border-radius: a.$border-radius;
+    -o-border-radius: a.$border-radius;
+  }
+
+  .cardItem img {
+    object-fit: cover;
+    border-radius: 100%;
+    width: 55px;
+    height: 55px;
+  }
+
+  .beer-card {
+    display: flex;
+    align-items: center;
+
+    .name_category {
+      padding: 0 10px;
+    }
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+
+  h6 {
+    font-size: 1.1rem;
+  }
+
+  .total {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 20px 0;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: a.$white;
+    }
+  }
+  .total p {
+    font-size: 1.2rem;
+    font-weight: a.$font-weight-bold;
+  }
+}
+
+.reminder {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+
+  .iconify {
+    color: #ffef2f;
+    font-size: 75px;
+    width: 100px;
+  }
+  p {
+    font-size: a.$p;
+  }
+}
+
+// mobilepay button
+.official_mobilepay {
+  background-color: a.$mobilepay;
+  color: a.$white;
+  padding: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+  img {
+    max-width: 40px;
+  }
+}
+
+// media query
+@media (min-width: mx.$screen-desktop) {
+
+  .modal_container_b {
+    justify-content: flex-start;
+  }
+
+}

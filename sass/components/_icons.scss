@@ -1,0 +1,43 @@
+// navigation icons
+.navigation .iconify {
+  height: 18px;
+  font-size: 18px;
+  margin-right: 20px;
+}
+
+#order_modal .arrow {
+  margin-right: 8px;
+}
+
+#order_modal .purchase {
+  margin-left: 8px;
+}
+
+// beer images
+.beers img,
+.servings_orders img {
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.beers img {
+  width: 70px;
+  height: 70px;
+}
+
+.servings_orders img {
+  width: 50px;
+  height: 50px;
+}
+
+// beer cart
+.checkout_beer {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  .iconify {
+    font-size: 35px;
+    cursor: pointer;
+  }
+}

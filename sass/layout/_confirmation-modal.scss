@@ -1,0 +1,68 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as mix;
+
+// purchase confirmation modal
+#confirmation_modal {
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  .modal_inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: v.$border-radius;
+    border-radius: 15px;
+    max-width: 85vw;
+    height: 60%;
+    margin: 4rem auto;
+    background: v.$white;
+
+    .close {
+      color: v.$green-dark;
+      position: absolute;
+      top: 10%;
+      right: 10%;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    h3,
+    h4 {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      text-transform: capitalize;
+      text-align: center;
+      color: v.$green-dark;
+    }
+
+    .beer-icon {
+      padding: 30px;
+
+      .iconify {
+        font-size: 75px;
+        color: v.$yellow;
+      }
+    }
+  }
+}
+
+// media query
+@media (min-width: mix.$screen-laptop) {
+  .modal_inner {
+    width: 650px;
+    margin: auto;
+
+    .close {
+      display: none;
+    }
+  }
+}

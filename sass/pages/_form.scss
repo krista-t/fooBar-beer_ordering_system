@@ -1,0 +1,123 @@
+@use "../abstracts/variables" as a;
+@use "../abstracts/mixins" as mix;
+
+// form styling
+form {
+  max-width: 500px;
+
+  fieldset {
+    border: none;
+    padding: 0;
+    margin: 20px 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .credit_card_details, .exp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    fieldset:first-of-type {
+      width: 55%;
+
+      input {
+        width: 120px;
+      }
+    }
+
+    .slash {
+      font-size: 30px;
+    }
+
+    fieldset:last-of-type {
+      width: 40%;
+    }
+  }
+
+  input {
+    border-radius: 20px;
+    border: 1px solid a.$grey-form;
+    outline: none;
+    padding: 6px 12px;
+    margin-top: 5px;
+    width: -webkit-fill-available;
+
+    &:valid {
+      border: 1px solid a.$green-dark;
+    }
+
+    &:focus, &focus:focus-within {
+      background-color: a.$green-queue;
+    }
+
+    &:focus:invalid, &:not(:focus):not(:placeholder-shown):invalid {
+      border: 1px solid a.$red;
+    }
+
+    
+  }
+}
+
+.form-container {
+  width: 100%;
+  max-width: 500px;
+}
+
+.iti__country-list {
+  max-width: 300px;
+  overflow-x: hidden;
+}
+
+form .credit_card_details .slash, form div .slash {
+  font-size: 26px;
+}
+
+.credit_card_details {
+  margin-bottom: 20px;
+}
+
+#pnumber {
+  margin-top: 5px!important;
+  width: 100%;
+}
+
+.iti__flag-container {
+  top: 5px!important;
+}
+
+.inline {
+  position: relative;
+}
+
+.iti {
+  width: -webkit-fill-available;
+  z-index: 1;
+}
+
+.inline input:valid+.after::after {
+  content: "🗸";
+  color: green;
+  border-radius: 50%;
+  border-radius: 1px solid green;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: 30%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.inline input:focus:invalid+.after::after, .inline input:not(:focus):not(:placeholder-shown):invalid+.after::after {
+  content: "❌";
+  font-size: 11px;
+  position: absolute;
+  top: 35%;
+  right: 25px;
+  transform: translateY(-50%);
+  width: 0px;
+  height: 0px;
+  z-index: 999;
+}
+

@@ -1,0 +1,57 @@
+//FONTS
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&family=Vampiro+One&display=swap");
+$primary-font: "Raleway", sans-serif;
+$font-weight-light: 300;
+$font-weight-bold: 600;
+$font-weight-bolder: 800;
+$secondary-font: "Vampiro One", cursive;
+
+//---COLORS---
+// font-size basics
+$h1: 24px;
+$h2: 16px;
+$h3: 16px;
+
+//primaries
+$black: #000000;
+$white: #ffffff;
+$grey-dark: #a8a8a8;
+$grey-form: #d3d3d3;
+$grey-light: #c4c4c4;
+$blue-dark: #1a5163;
+$mobilepay: #5A78FF;
+
+//greens
+$green-dark: #247951;
+$green-mid: #2dc07b;
+$green-light: #18A877;
+$green-queue: #c9e1d9;
+$green-darker: #036a4f;
+
+//reds
+$red: brown;
+$orange: #ff632a;
+
+//yellow
+$yellow: #ffcf01;
+$icons-yellow: #FFEF2F;
+
+$links-nav: 14px;
+$p: 16px;
+$h3: 14px;
+
+// dashboard
+$order-nr: 16px;
+$time: 14px;
+$beer-amount: 10px;
+
+// font-size for readmore-modal
+$readmore-h2: 22px;
+$readmore-h3: 18px;
+
+// checkout modal
+$label: 16px;
+$desc-label: 12px;
+
+//border-radius
+$border-radius: 20px;

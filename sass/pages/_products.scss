@@ -1,0 +1,75 @@
+@use "../abstracts/variables" as a;
+@use '../abstracts/mixins' as mx;
+
+.checkout_beer {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+
+  .amount_beers {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    width: 25px;
+    height: 25px;
+    background-color: a.$icons-yellow;
+    font-weight: a.$font-weight-bolder;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+}
+
+.beers {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 280px);
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  justify-content: center;
+
+  .card {
+    max-width: 300px;
+    background-color: a.$white;
+    padding: 25px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(196, 196, 196, 1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(196, 196, 196, 1);
+    box-shadow: 0px 0px 5px 0px rgba(196, 196, 196, 1);
+
+    h3,
+    h4 {
+      margin: 4px 0;
+    }
+
+    .first_layer {
+      margin-bottom: 10px;
+    }
+
+    .first_layer,
+    .middle_layer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .second_layer {
+      width: 65%;
+    }
+
+    .bottom_layer {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+// media query
+@media (min-width: mx.$screen-ipad) {
+  .beers {
+    justify-content: left;
+  }
+}

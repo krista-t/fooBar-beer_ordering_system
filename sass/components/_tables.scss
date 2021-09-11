@@ -1,0 +1,26 @@
+@use "../abstracts/variables" as a;
+
+// table icon on dashboard
+.table {
+    width: 25px;
+    height: 25px;
+    border: 2px solid a.$white;
+    transform: rotateZ(45deg);
+    position: relative;
+  
+    .number {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotateZ(-45deg);
+      color: a.$white;
+    }
+  }
+  
+  .orders .table {
+    border: 2px solid a.$black;
+    
+    .number {
+      color: a.$black;
+    }
+  }

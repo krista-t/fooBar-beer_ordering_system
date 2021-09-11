@@ -1,0 +1,66 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as mix;
+
+// read more about each beer modal
+#beer_modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+
+    .modal_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .modal_inner_readmore {
+        background-color: v.$green-dark;
+        margin: 20px;
+        max-width: 700px;
+        padding: 60px;
+        position: relative;
+    
+        .close {
+            color: v.$white;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+          }
+
+        .headline {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            
+            img {
+                max-width: 200px;
+                padding: 10px;
+                display: block;
+                height: auto;
+                margin: auto;
+            }
+        }
+    }
+}
+
+// media query
+@media (min-width: mix.$screen-ipad) {
+    .details {
+        max-width: 460px;
+        margin: auto;
+    }
+
+    #beer_modal .modal_inner_readmore .headline {
+        flex-wrap: nowrap;
+    }
+}

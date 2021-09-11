@@ -1,0 +1,17 @@
+@use "../abstracts/variables" as a;
+
+// dark-mode styling
+.darkmode--activated h1,
+.darkmode--activated li, .darkmode--activated .search_filters button, .darkmode--activated .checkout_beer {
+  color: a.$white;
+}
+.darkmode--activated #order_modal {
+    background-color: a.$black;
+    p, label, button, span {
+        color: a.$white;
+    }
+}
+
+.darkmode--activated .amount_beers {
+  color: a.$black;
+}
