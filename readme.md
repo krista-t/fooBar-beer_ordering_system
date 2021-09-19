@@ -3,7 +3,7 @@ foobar-mandalorians
 Final exam on fronend elective coded by a group of two.
 Click on the table icon to order your beer.
 
-#PREVIEW:
+SEE THIS PROJECT:
 https://eager-wiles-625cc6.netlify.app/
 
 PACKAGE FOR DARK MODE:
