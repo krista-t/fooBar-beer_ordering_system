@@ -14,3 +14,5 @@ https://www.chartjs.org/
 
 LOADING SCREEN ANIMATION:
 https://codepen.io/comehope/pen/rZeOQp
+
+Project is no longer active to preview.
