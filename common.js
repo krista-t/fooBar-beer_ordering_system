@@ -1,27 +1,27 @@
 // images, search bar
 
-// remove loading screen once data is set - maria
+// remove loading screen once data is set
 export function loadingScreen() {
-  document.querySelector(".loader-box").style.display = "none";
+	document.querySelector(".loader-box").style.display = "none";
 }
 
-// switch user on the navigation - maria
+// switch user on the navigation
 export function switchUser() {
-  const button = document.querySelector(".log_in button");
+	const button = document.querySelector(".log_in button");
 
-  button.addEventListener("click", activateDropdown);
+	button.addEventListener("click", activateDropdown);
 
-  function activateDropdown() {
-    const boxClicked = document.querySelector(".log_in");
-    const extraUser = document.querySelector(".slide_out");
+	function activateDropdown() {
+		const boxClicked = document.querySelector(".log_in");
+		const extraUser = document.querySelector(".slide_out");
 
-    window.onclick = function (e) {
-      if (boxClicked.contains(e.target)) {
-        extraUser.classList.add("activated");
-      } else {
-        console.log("outside");
-        extraUser.classList.remove("activated");
-      }
-    };
-  }
+		window.onclick = function (e) {
+			if (boxClicked.contains(e.target)) {
+				extraUser.classList.add("activated");
+			} else {
+				console.log("outside");
+				extraUser.classList.remove("activated");
+			}
+		};
+	}
 }
