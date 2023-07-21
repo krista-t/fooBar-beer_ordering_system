@@ -14,14 +14,5 @@ export function switchUser() {
 	function activateDropdown() {
 		const boxClicked = document.querySelector(".log_in");
 		const extraUser = document.querySelector(".slide_out");
-
-		window.onclick = function (e) {
-			if (boxClicked.contains(e.target)) {
-				extraUser.classList.add("activated");
-			} else {
-				console.log("outside");
-				extraUser.classList.remove("activated");
-			}
-		};
 	}
 }

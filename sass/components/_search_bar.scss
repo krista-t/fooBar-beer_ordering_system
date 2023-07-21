@@ -2,16 +2,17 @@
 
 // search bar
 .search_bar {
-  margin: auto;
-  margin-right: 0px;
+	margin: auto;
+	margin-right: 0px;
 
-  input {
-    border: 1px solid a.$grey-light;
-    border-radius: 20px;
-    padding: 7px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-  }
+	input {
+		border: 1px solid a.$grey-light;
+		border-radius: 20px;
+		padding: 7px;
+		width: 250px;
+	}
+
+	input:focus {
+		outline: 1px solid a.$green-dark;
+	}
 }

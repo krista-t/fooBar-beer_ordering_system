@@ -1,6 +1,6 @@
 ("use strict");
 
-import "./sass/customer.scss";
+import "../sass/customer.scss";
 import { loadingScreen, switchUser } from "./common.js";
 import { addToBasket, removeFromBasket, postOrder } from "./basket";
 import "./dark_mode.js";

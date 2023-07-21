@@ -1,283 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/fb_logo.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>FooBar's beers</title>
+		<meta
+			name="description"
+			content="Ready to get the evening started right? Here you can find all about our beers and more!"
+		/>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/fb_logo.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FooBar's beers</title>
-  <meta name="description"
-    content="Ready to get the evening started right? Here you can find all about our beers and more!" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+		/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+	</head>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-</head>
+	<body>
+		<!--
+    loader -->
+		<div class="loader-box">
+			<div class="container">
+				<div class="keg">
+					<span class="handle"></span>
+					<span class="pipe"></span>
+				</div>
+				<div class="glass">
+					<span class="beer-filled"></span>
+				</div>
+			</div>
+		</div>
+		<!-- navigation -->
+		<header>
+			<div class="navigation">
+				<img src="public/foobar_logo.svg" alt="logo" class="logo" />
 
-<body>
-  <div class="loader-box">
-    <div class="container">
-      <div class="keg">
-        <span class="handle"></span>
-        <span class="pipe"></span>
-      </div>
-      <div class="glass">
-        <span class="beer-filled"></span>
-      </div>
-    </div>
-  </div>
-  <header>
-    <div class="navigation">
-      <img src="public/foobar_logo.svg" alt="logo" class="logo" />
+				<input type="checkbox" id="toggle" />
+				<label for="toggle" class="hamburger"></label>
 
-      <input type="checkbox" id="toggle" />
-      <label for="toggle" class="hamburger"></label>
+				<div class="slide-in">
+					<nav>
+						<ul>
+							<li>
+								<a href="/index.html"
+									><span
+										class="iconify"
+										data-inline="false"
+										data-icon="fluent:history-24-regular"
+									></span>
+									Orders Dashboard</a
+								>
+							</li>
+							<li>
+								<a href="/customer_order.html" class="products active"
+									><span
+										class="iconify"
+										data-inline="false"
+										data-icon="dashicons:products"
+									></span>
+									Products</a
+								>
+							</li>
 
-      <div class="slide-in">
-        <nav>
-          <ul>
-            <li>
-              <a href=""><span class="iconify" data-icon="fluent:home-32-regular"></span>
-                Home</a>
-            </li>
-            <li>
-              <a href="" class="products active"><span class="iconify" data-inline="false"
-                  data-icon="dashicons:products"></span>
-                Products</a>
-            </li>
-            <li>
-              <a href=""><span class="iconify" data-inline="false" data-icon="fluent:history-24-regular"></span>
-                Order history</a>
-            </li>
-            <li>
-              <button class="checkout">
-                <span class="iconify" data-inline="false" data-icon="ion:beer"></span>
-                Checkout
-              </button>
-            </li>
-            <li>
-              <a href="" class="border_section"><span class="iconify" data-inline="false"
-                  data-icon="clarity:settings-outline-alerted"></span>
-                Settings</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="log_in">
-          <button>
-            <span class="user second">
-              <span class="table">
-                <span class="number">1</span>
-              </span>
-              <span>Table 1</span>
-            </span>
-            <span class="iconify" data-inline="false" data-icon="akar-icons:more-vertical"></span>
-          </button>
-          <div class="slide_out">
-            <ul>
-              <li>
-                <a href="/index.html">
-                  <div class="user">
-                    <img src="/foobar_avatar.png" alt="user" />
-                    <span>Foobar</span>
-                  </div>
-                  <span class="iconify" data-inline="false" data-icon="akar-icons:more-vertical"></span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+							<li>
+								<button class="checkout">
+									<span class="iconify" data-inline="false" data-icon="ion:beer"></span>
+									Checkout
+								</button>
+							</li>
+							<li>
+								<a href="" class="border_section"
+									><span
+										class="iconify"
+										data-inline="false"
+										data-icon="clarity:settings-outline-alerted"
+									></span>
+									Settings</a
+								>
+							</li>
+						</ul>
+					</nav>
+					<div class="log_in">
+						<button>
+							<span class="user second">
+								<span class="table">
+									<span class="number">1</span>
+								</span>
+								<span>Table 1</span>
+							</span>
+							<span
+								class="iconify"
+								data-inline="false"
+								data-icon="akar-icons:more-vertical"
+							></span>
+						</button>
+						<div class="slide_out"></div>
+					</div>
+				</div>
+			</div>
+		</header>
 
-  <div class="checkout_beer checkout">
-    <div class="amount_beers hide"></div>
-    <span class="iconify" data-inline="false" data-icon="ion:beer"></span>
-  </div>
+		<!-- checkout basket -->
+		<div class="checkout_beer checkout">
+			<div class="amount_beers hide"></div>
+			<span class="iconify" data-inline="false" data-icon="ion:beer"></span>
+		</div>
 
-  <main class="products">
-    <section id="products">
-      <h1>Ready for beer o'clock?</h1>
-      <div class="search_filters">
-        <div class="filters"></div>
-        <div class="search_bar">
-          <input type="text" name="search-bar" id="search-bar" placeholder="Search for a beer" />
-        </div>
-      </div>
-      <div class="beers"></div>
-    </section>
-    <section id="orders">
-      <div id="order_modal">
-        <div class="modal_container_b">
-          <div class="form-container"></div>
-          <aside>
-            <div class="basket-container">
-              <h1>Basket summary</h1>
-              <div class="summary"></div>
-              <div class="total">
-                <p>Total</p>
-                <p id="total"></p>
-              </div>
-            </div>
+		<main class="products">
+			<section id="products">
+				<h1>Ready for beer o'clock?</h1>
+				<div class="search_filters">
+					<div class="filters"></div>
+					<div class="search_bar">
+						<input
+							type="text"
+							name="search-bar"
+							id="search-bar"
+							placeholder="Search for a beer"
+						/>
+					</div>
+				</div>
+				<div class="beers"></div>
+			</section>
+			<section id="orders">
+				<div id="order_modal">
+					<div class="modal_container_b">
+						<div class="form-container"></div>
+						<aside>
+							<div class="basket-container">
+								<h1>Basket summary</h1>
+								<div class="summary"></div>
+								<div class="total">
+									<p>Total</p>
+									<p id="total"></p>
+								</div>
+							</div>
 
-            <div class="reminder">
-              <span class="iconify" data-inline="false" data-icon="oi:lightbulb"></span>
-              <p>
-                You can see the status of your order in one of our tv screens
-                or stay in tune with the app’s upcoming notifications.
-              </p>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
-  </main>
+							<div class="reminder">
+								<span
+									class="iconify"
+									data-inline="false"
+									data-icon="oi:lightbulb"
+								></span>
+								<p>
+									You can see the status of your order in one of our tv screens or stay
+									in tune with the app’s upcoming notifications.
+								</p>
+							</div>
+						</aside>
+					</div>
+				</div>
+			</section>
+		</main>
 
-  <template id="counter">
-    <div class="counter">
-      <input type="button" value="-" class="minus" />
-      <input type="text" size="1" value="0" class="count" />
-      <input type="button" value="+" class="plus" />
-    </div>
-  </template>
+		<template id="counter">
+			<div class="counter">
+				<input type="button" value="-" class="minus" />
+				<input type="text" size="1" value="0" class="count" />
+				<input type="button" value="+" class="plus" />
+			</div>
+		</template>
 
-  <template id="b_modal">
-    <div id="beer_modal">
-      <div class="modal_container">
-        <div class="modal_inner_readmore">
-          <span class="close">&times;</span>
-          <div class="headline">
-            <img src="/" alt="" />
-            <div class="details">
-              <h2></h2>
-              <h3></h3>
-              <p></p>
-            </div>
-          </div>
-          <div class="desc">
-            <p></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
+		<template id="b_modal">
+			<div id="beer_modal">
+				<div class="modal_container">
+					<div class="modal_inner_readmore">
+						<span class="close">&times;</span>
+						<div class="headline">
+							<img src="/" alt="" />
+							<div class="details">
+								<h2></h2>
+								<h3></h3>
+								<p></p>
+							</div>
+						</div>
+						<div class="desc">
+							<p></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</template>
 
-  <template id="checkout">
-    <h1>Order confirmation</h1>
-    <div class="form">
-      <div class="payment_options">
-        <button class="credit_card active_filter">Credit card</button>
-        <button class="mobilepay">MobilePay</button>
-      </div>
+		<template id="checkout">
+			<h1>Order confirmation</h1>
+			<div class="form">
+				<div class="payment_options">
+					<button class="credit_card active_filter">Credit card</button>
+					<button class="mobilepay">MobilePay</button>
+				</div>
 
-      <form>
-        <fieldset>
-          <label for="username">Username</label>
-          <p>
-            Give yourself a cool name with 2 to 10 characters and then try to
-            find your order on one of our tv screens
-          </p>
-          <div class="inline">
-            <input id="username" name="username" autocomplete="username" inputmode="text" type="text" minlength="2"
-              maxlength="10" pattern="[a-zA-Z0-9]+" placeholder="e. g. Foobar Inc." required /><span
-              class="after"></span>
-          </div>
-        </fieldset>
-        <fieldset>
-          <label for="pnumber">Phone-number</label>
-          <p>This number will only be used to send you your order number</p>
-          <div class="inline">
-            <input id="pnumber" name="phonenumber" inputmode="tel" autocomplete="tel" type="text"
-              pattern="[\s]?\d{2}[\s]?\d{2}[\s]?\d{2}[\s]?\d{2}" minlength="8" maxlength="11" placeholder="00 00 00 00"
-              required />
-            <span class="after"></span>
-          </div>
-        </fieldset>
-        <fieldset>
-          <label for="cardname">Name on the card</label>
-          <p>Full name as presented on your credit card</p>
-          <div class="inline">
-            <input id="cardname" name="cardname" inputmode="text" type="text" pattern="[a-zA-Z]+"
-              placeholder="e. g. John Doe" required />
-            <span class="after"></span>
-          </div>
-        </fieldset>
-        <fieldset>
-          <label for="creditcard">Credit card number</label>
-          <p>
-            This information will be used for this purchase only and not
-            stored anywhere
-          </p>
-          <div class="inline">
-            <input id="creditcard" name="creditcard" inputmode="numeric" type="text"
-              pattern="[\s]?\d{4}[\s]?\d{4}[\s]?\d{4}[\s]?\d{4}" minlength="19" maxlength="19"
-              placeholder="💳 0000 0000 0000 0000" required />
-            <span class="after"></span>
-          </div>
-        </fieldset>
+				<!-- customer form -->
+				<form>
+					<!-- <fieldset>
+						<label for="username">Username</label>
+						<p>
+							Give yourself a cool name with 2 to 10 characters and then try to find your
+							order on one of our tv screens
+						</p>
+						<div class="inline">
+							<input
+								id="username"
+								name="username"
+								autocomplete="username"
+								inputmode="text"
+								type="text"
+								minlength="2"
+								maxlength="10"
+								pattern="[a-zA-Z0-9]+"
+								placeholder="e. g. Foobar Inc."
+								required
+							/><span class="after"></span>
+						</div>
+					</fieldset>
+					<fieldset>
+						<label for="pnumber">Phone-number</label>
+						<p>This number will only be used to send you your order number</p>
+						<div class="inline">
+							<input
+								id="pnumber"
+								name="phonenumber"
+								inputmode="tel"
+								autocomplete="tel"
+								type="text"
+								pattern="[\s]?\d{2}[\s]?\d{2}[\s]?\d{2}[\s]?\d{2}"
+								minlength="8"
+								maxlength="11"
+								placeholder="00 00 00 00"
+								required
+							/>
+							<span class="after"></span>
+						</div>
+					</fieldset>
+					<fieldset>
+						<label for="cardname">Name on the card</label>
+						<p>Full name as presented on your credit card</p>
+						<div class="inline">
+							<input
+								id="cardname"
+								name="cardname"
+								inputmode="text"
+								type="text"
+								placeholder="e. g. John Doe"
+								required
+							/>
+							<span class="after"></span>
+						</div>
+					</fieldset>
+					<fieldset>
+						<label for="creditcard">Credit card number</label>
+						<p>
+							This information will be used for this purchase only and not stored
+							anywhere
+						</p>
+						<div class="inline">
+							<input
+								id="creditcard"
+								name="creditcard"
+								inputmode="numeric"
+								type="text"
+								pattern="[\s]?\d{4}[\s]?\d{4}[\s]?\d{4}[\s]?\d{4}"
+								minlength="19"
+								maxlength="19"
+								placeholder="💳 0000 0000 0000 0000"
+								required
+							/>
+							<span class="after"></span>
+						</div>
+					</fieldset>
 
-        <div class="credit_card_details">
-          <fieldset>
-            <label for="expirationdate">Expiration date</label>
-            <div class="exp">
-              <span class="inline">
-                <input id="expirationmonth" name="expirationmonth" inputmode="numeric" type="text"
-                  pattern="0[1-9]|1[0-2]" minlength="2" maxlength="2" max="12" placeholder="MM" required />
-                <span class="after"></span>
-              </span>
-              <span class="slash">/</span>
-              <span class="inline">
-                <input id="expirationyear" name="expirationyear" inputmode="numeric" type="text" pattern="\d+"
-                  minlength="2" maxlength="2" placeholder="YY" required />
-                <span class="after"></span>
-              </span>
-            </div>
-          </fieldset>
-          <fieldset>
-            <label for="cvv">CVV/CVC</label>
-            <span class="inline">
-              <input id="cvv" name="cvv" inputmode="numeric" type="text" pattern="\d+" minlength="3" maxlength="3"
-                placeholder="🔒 CVV/CVC" required />
-              <span class="after"></span>
-            </span>
-          </fieldset>
-        </div>
-        <p style="margin-bottom: 8px;"><span class="iconify" data-inline="false" data-icon="bx:bxs-lock-alt"
-            style="color: #111;margin-right: 4px;"></span>Your
-          transaction is secured with SSL encryption and protected under Danish law.</p>
-        <p>
-          By clicking “Beer me up”, I agree with FooBar’s Terms of Service and
-          with purchasing the content in the basket summary.
-        </p>
-        <div class="buttons">
-          <button type="reset" class="return">
-            <span class="iconify arrow" data-inline="false" data-icon="bi:arrow-left"></span>
-            Return
-          </button>
-          <button type="submit" class="submit">
-            Beer me up
-            <span class="iconify purchase" data-inline="false" data-icon="bi:bag-check"></span>
-          </button>
-        </div>
-      </form>
-    </div>
-    <div id="confirmation_modal" class="hide">
-      <div class="modal_inner">
-        <span class="close">&times;</span>
-        <h3>Your order has been received</h3>
-        <div class="beer-icon shake">
-          <span class="iconify" data-inline="false" data-icon="ion:beer"></span>
-        </div>
-        <h4 class="id">Your order number is:</h4>
-      </div>
-    </div>
-  </template>
+					<div class="credit_card_details">
+						<fieldset>
+							<label for="expirationdate">Expiration date</label>
+							<div class="exp">
+								<span class="inline">
+									<input
+										id="expirationmonth"
+										name="expirationmonth"
+										inputmode="numeric"
+										type="text"
+										pattern="0[1-9]|1[0-2]"
+										minlength="2"
+										maxlength="2"
+										max="12"
+										placeholder="MM"
+										required
+									/>
+									<span class="after"></span>
+								</span>
+								<span class="slash">/</span>
+								<span class="inline">
+									<input
+										id="expirationyear"
+										name="expirationyear"
+										inputmode="numeric"
+										type="text"
+										pattern="\d+"
+										minlength="2"
+										maxlength="2"
+										placeholder="YY"
+										required
+									/>
+									<span class="after"></span>
+								</span>
+							</div>
+						</fieldset>
+						<fieldset>
+							<label for="cvv">CVV/CVC</label>
+							<span class="inline">
+								<input
+									id="cvv"
+									name="cvv"
+									inputmode="numeric"
+									type="text"
+									pattern="\d+"
+									minlength="3"
+									maxlength="3"
+									placeholder="🔒 CVV/CVC"
+									required
+								/>
+								<span class="after"></span>
+							</span>
+						</fieldset>
+					</div>
+					<p style="margin-bottom: 8px">
+						<span
+							class="iconify"
+							data-inline="false"
+							data-icon="bx:bxs-lock-alt"
+							style="color: #111; margin-right: 4px"
+						></span
+						>Your transaction is secured with SSL encryption and protected under Danish
+						law.
+					</p>
+					<p>
+						By clicking “Beer me up”, I agree with FooBar’s Terms of Service and with
+						purchasing the content in the basket summary.
+					</p>-->
+					<div class="buttons">
+						<button type="reset" class="return">
+							<span
+								class="iconify arrow"
+								data-inline="false"
+								data-icon="bi:arrow-left"
+							></span>
+							Return
+						</button>
+						<button type="submit" class="submit">
+							Beer me up
+							<span
+								class="iconify purchase"
+								data-inline="false"
+								data-icon="bi:bag-check"
+							></span>
+						</button>
+					</div>
+				</form>
+			</div>
 
-  <template id="beer-order-card"> </template>
+			<!-- order confitm modal -->
+			<div id="confirmation_modal" class="hide">
+				<div class="modal_inner">
+					<span class="close">&times;</span>
+					<h3>Your order status</h3>
+					<div class="beer-icon shake">
+						<span class="iconify" data-inline="false" data-icon="ion:beer"></span>
+					</div>
+					<h4 class="id">Your order number is:</h4>
+				</div>
+			</div>
+		</template>
 
-  <script type="module" src="/order.js"></script>
-  <script type="module" src="/basket.js"></script>
+		<template id="beer-order-card"> </template>
 
-  <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
-</body>
+		<script type="module" src="/js/order.js"></script>
+		<script type="module" src="/js/basket.js"></script>
 
+		<script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+	</body>
 </html>

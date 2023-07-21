@@ -1,10 +1,9 @@
-foobar-mandalorians 
+fooBar-beer_ordering_system
 
-Final exam on fronend elective coded by a group of two.
+Frontend project using vanilla JS, Vite and SASS
 Click on the table icon to order your beer.
 
 SEE THIS PROJECT:
-https://eager-wiles-625cc6.netlify.app/
 
 PACKAGE FOR DARK MODE:
 https://www.npmjs.com/package/darkmode-js
@@ -14,5 +13,3 @@ https://www.chartjs.org/
 
 LOADING SCREEN ANIMATION:
 https://codepen.io/comehope/pen/rZeOQp
-
-Project is no longer active to preview.

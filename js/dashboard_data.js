@@ -1,8 +1,8 @@
 window.addEventListener("DOMContentLoaded", startLiveUpdate);
 
 import { loadingScreen, switchUser } from "./common.js";
-import { currentTime, nameId, maxAmount } from "./helpers";
-import { chart } from "./chart";
+import { currentTime, nameId, maxAmount } from "./utils.js";
+import { chart } from "./chart.js";
 
 import { automaticDarkMode } from "./dark_mode.js";
 

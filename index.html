@@ -1,167 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/fb_logo.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>FooBar's dashboard</title>
+		<meta
+			name="description"
+			content="Here's all the information during FooBar's active hours. All about the status of our orders, which beers are the most popular and more!"
+		/>
+	</head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/fb_logo.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FooBar's dashboard</title>
-  <meta name="description"
-    content="Here's all the information during FooBar's active hours. All about the status of our orders, which beers are the most popular and more!" />
-</head>
+	<body>
+		<!-- loader -->
+		<div class="loader-box">
+			<div class="container">
+				<div class="keg">
+					<span class="handle"></span>
+					<span class="pipe"></span>
+				</div>
+				<div class="glass">
+					<span class="beer-filled"></span>
+				</div>
+			</div>
+		</div>
+		<!-- navigation -->
+		<header class="darkmode-ignore">
+			<div class="navigation">
+				<a href="/index.html">
+					<img src="public/foobar_logo.svg" alt="logo" class="logo"
+				/></a>
 
-<body>
-  <div class="loader-box">
-    <div class="container">
-      <div class="keg">
-        <span class="handle"></span>
-        <span class="pipe"></span>
-      </div>
-      <div class="glass">
-        <span class="beer-filled"></span>
-      </div>
-    </div>
-  </div>
-  <header class="darkmode-ignore">
-    <div class="navigation">
-      <img src="public/foobar_logo.svg" alt="logo" class="logo" />
+				<input type="checkbox" id="toggle" />
+				<label for="toggle" class="hamburger"></label>
 
-      <input type="checkbox" id="toggle" />
-      <label for="toggle" class="hamburger"></label>
+				<div class="slide-in">
+					<nav>
+						<ul>
+							<li>
+								<a href="#" class="active"
+									><span
+										class="iconify"
+										data-inline="false"
+										data-icon="fluent:history-24-regular"
+									></span>
+									Orders Dashboard</a
+								>
+							</li>
+							<li>
+								<a href="/customer_order.html"
+									><span
+										class="iconify"
+										data-inline="false"
+										data-icon="dashicons:products"
+									></span>
+									Products</a
+								>
+							</li>
+							<li>
+								<a href="#"
+									><span
+										class="iconify"
+										data-inline="false"
+										data-icon="fluent:people-community-20-regular"
+									></span>
+									Customers</a
+								>
+							</li>
 
-      <div class="slide-in">
-        <nav>
-          <ul>
-            <li>
-              <a href=""><span class="iconify" data-icon="fluent:home-32-regular"></span>
-                Home</a>
-            </li>
-            <li>
-              <a href=""><span class="iconify" data-inline="false" data-icon="dashicons:products"></span>
-                Products</a>
-            </li>
-            <li>
-              <a href=""><span class="iconify" data-inline="false"
-                  data-icon="fluent:people-community-20-regular"></span>
-                Customers</a>
-            </li>
-            <li>
-              <a href="" class="active"><span class="iconify" data-inline="false"
-                  data-icon="fluent:history-24-regular"></span>
-                Orders</a>
-            </li>
-            <li>
-              <a href="" class="border_section"><span class="iconify" data-inline="false"
-                  data-icon="ant-design:message-outlined"></span>
-                Messages</a>
-            </li>
-            <li>
-              <a href=""><span class="iconify" data-inline="false" data-icon="ion:stats-chart"></span>
-                Statistics</a>
-            </li>
-            <li>
-              <a href=""><span class="iconify" data-inline="false" data-icon="clarity:settings-outline-alerted"></span>
-                Settings</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="low_stock">
-        </div>
-        <div class="log_in">
-          <button>
-            <span class="user">
-              <img src="/foobar_avatar.png" alt="user" />
-              <span>Foobar</span>
-            </span>
-            <span class="iconify" data-inline="false" data-icon="akar-icons:more-vertical"></span>
-          </button>
-          <div class="slide_out">
-            <ul>
-              <li>
-                <a href="/customer_order.html">
-                  <div class="user second">
-                    <div class="table">
-                      <div class="number">1</div>
-                    </div>
-                    <span>Table 1</span>
-                  </div>
-                  <span class="iconify" data-inline="false" data-icon="akar-icons:more-vertical"></span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+							<li>
+								<a href="#" class="border_section"
+									><span
+										class="iconify"
+										data-inline="false"
+										data-icon="ant-design:message-outlined"
+									></span>
+									Messages</a
+								>
+							</li>
+							<li>
+								<a href="#"
+									><span
+										class="iconify"
+										data-inline="false"
+										data-icon="ion:stats-chart"
+									></span>
+									Statistics</a
+								>
+							</li>
+							<li>
+								<a href=""
+									><span
+										class="iconify"
+										data-inline="false"
+										data-icon="clarity:settings-outline-alerted"
+									></span>
+									Settings</a
+								>
+							</li>
+						</ul>
+					</nav>
+					<div class="low_stock"></div>
+					<div class="log_in">
+						<button>
+							<span class="user">
+								<img src="/foobar_avatar.png" alt="user" />
+								<span>Foobar</span>
+							</span>
+							<span
+								class="iconify"
+								data-inline="false"
+								data-icon="akar-icons:more-vertical"
+							></span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</header>
 
-  <main class="servings_orders">
-    <section id="serving">
-      <h1>ready for pick up</h1>
-      <div class="container">
-        <div class="serving-box"></div>
+		<main class="servings_orders">
+			<section id="serving">
+				<h1>ready for pick up</h1>
+				<div class="container">
+					<div class="serving-box"></div>
 
-        <div class="chart-container darkmode-ignore">
-          <canvas id="myChart" width="400" height="420"></canvas>
-        </div>
-      </div>
-    </section>
+					<div class="chart-container darkmode-ignore">
+						<canvas id="myChart" width="500" height="520"></canvas>
+					</div>
+				</div>
+			</section>
 
-    <section id="order">
-      <h1>upcoming orders</h1>
-      <div class="container">
-        <div class="order-box"></div>
-        <div class="queue-number">
-          <span></span>
-          <div class="bar">
-            <p>Queue</p>
-            <div class="progress_bar">
-              <div class="inner_bar"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+			<section id="order">
+				<h1>upcoming orders</h1>
+				<div class="container">
+					<div class="order-box"></div>
+					<div class="queue-number">
+						<span></span>
+						<div class="bar">
+							<p>Queue</p>
+							<div class="progress_bar">
+								<div class="inner_bar"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
 
-  <div class="time">
-    <p>time</p>
-  </div>
+		<div class="time">
+			<p>time</p>
+		</div>
 
-  <template id="templ-serving">
-    <div class="servings">
-      <div class="top_bar darkmode-ignore">
-        <div class="left_section">
-          <p class="serving-id"></p>
-          <p class="serving-time"></p>
-        </div>
-        <div class="table">
-          <div class="number">1</div>
-        </div>
-        <!-- <span class="iconify" data-inline="false" data-icon="vs:table-o"></span> -->
-      </div>
-      <div class="beer-type"></div>
-    </div>
-  </template>
+		<template id="templ-serving">
+			<div class="servings">
+				<div class="top_bar darkmode-ignore">
+					<div class="left_section">
+						<p class="serving-id"></p>
+						<p class="serving-time"></p>
+					</div>
+					<div class="table">
+						<div class="number">1</div>
+					</div>
+					<!-- <span class="iconify" data-inline="false" data-icon="vs:table-o"></span> -->
+				</div>
+				<div class="beer-type"></div>
+			</div>
+		</template>
 
-  <template id="templ-orders">
-    <div class="orders">
-      <div class="top_bar darkmode-ignore">
-        <div class="left_section">
-          <p class="order-id"></p>
-          <p class="order-time"></p>
-        </div>
-        <div class="table">
-          <div class="number">1</div>
-        </div>
-        <!-- <span class="iconify" data-inline="false" data-icon="vs:table-o"></span> -->
-      </div>
-      <div class="beer-type"></div>
-    </div>
-  </template>
+		<template id="templ-orders">
+			<div class="orders">
+				<div class="top_bar darkmode-ignore">
+					<div class="left_section">
+						<p class="order-id"></p>
+						<p class="order-time"></p>
+					</div>
+					<div class="table">
+						<div class="number">1</div>
+					</div>
+					<!-- <span class="iconify" data-inline="false" data-icon="vs:table-o"></span> -->
+				</div>
+				<div class="beer-type"></div>
+			</div>
+		</template>
 
-  <script type="module" src="/main.js"></script>
-  <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
-</body>
-
+		<script type="module" src="/js/main.js"></script>
+		<script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+	</body>
 </html>
