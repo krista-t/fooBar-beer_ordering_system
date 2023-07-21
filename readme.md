@@ -1,9 +1,9 @@
 fooBar-beer_ordering_system
 
-Frontend project using vanilla JS, Vite and SASS
-Click on the table icon to order your beer.
+Frontend project using vanilla JS, Vite and SASS.
+Order your beer, and follow the progress of your order in dashboard.
 
-SEE THIS PROJECT:
+SEE THIS PROJECT: https://foobar-beer-ordering-system.netlify.app/
 
 PACKAGE FOR DARK MODE:
 https://www.npmjs.com/package/darkmode-js
