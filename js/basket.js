@@ -47,6 +47,7 @@ function addCartActivity() {
 //create HTML elements and render in basket according to data
 function showInBasket(beerLabel) {
 	const item = basket[beerLabel];
+	console.log(item);
 	if (item === undefined) {
 		console.log("you have 0 beers, item removed");
 	}
