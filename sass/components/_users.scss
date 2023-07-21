@@ -1,20 +1,27 @@
+@use "../abstracts/variables" as v;
+
 // users on sidebar
 .log_in {
-    position: relative;
-  }
-  
-  .slide_out {
-    position: absolute;
-    top: -80px;
-    left: 0;
-    opacity: 0;
-  }
-  
-  .log_in button:hover + .slide_out {
-    transition: 0.8s;
-    opacity: 1;
-  }
-  
-  .activated {
-    opacity: 1;
-  }
+	position: relative;
+}
+
+.slide_out {
+	position: absolute;
+	top: -80px;
+	left: 0;
+	opacity: 0;
+}
+
+.log_in a {
+	text-decoration: none;
+	color: v.$white;
+}
+
+.log_in a:hover + .slide_out {
+	transition: 0.8s;
+	opacity: 1;
+}
+
+.activated {
+	opacity: 1;
+}
