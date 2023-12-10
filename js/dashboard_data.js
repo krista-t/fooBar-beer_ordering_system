@@ -73,7 +73,7 @@ function showQueueLength(q) {
 
 // showint timestamp as time
 function showCurrentTime(time) {
-	document.querySelector(".time p").textContent = currentTime(time);
+	document.querySelector(".time p").innerHTML = currentTime(time);
 }
 
 //populate template create missing elements and display servings
